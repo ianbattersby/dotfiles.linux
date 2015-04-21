@@ -1,0 +1,84 @@
+general {
+	#output_format = "dzen2"
+	#colors = true
+	interval = 5
+}
+
+#order += "ipv6"
+order += "disk /"
+order += "disk /boot"
+order += "disk /var"
+order += "disk /home"
+#order += "run_watch DHCP"
+#order += "run_watch VPNC"
+#order += "path_exists VPN"
+order += "ethernet enp0s25"
+order += "wireless wlp3s0"
+order += "battery 1"
+order += "cpu_temperature 0"
+order += "load"
+#order += "tztime local"
+order += "tztime london"
+
+wireless wlp3s0 {
+	format_up = "W: (%quality at %essid, %bitrate) %ip"
+	format_down = "" # "W: down"
+}
+
+ethernet enp0s25 {
+	format_up = "E: %ip (%speed)"
+	format_down = "" #"E: down"
+}
+
+battery 1 {
+	format = "%status %percentage %remaining" # %emptytime"
+	format_down = "No battery"
+	path = "/sys/class/power_supply/BAT%d/uevent"
+	low_threshold = 10
+}
+
+run_watch DHCP {
+	pidfile = "/var/run/dhcpcd*.pid"
+}
+
+run_watch VPNC {
+	pidfile = "/var/run/vpnc/pid"
+}
+
+path_exists VPN {
+	path = "/proc/sys/net/ipv4/conf/tun0"
+}
+
+tztime local {
+	format = "%Y-%m-%d %H:%M:%S"
+}
+
+tztime london {
+	format = "%d-%m-%Y %H:%M:%S"
+	timezone = "Europe/London"
+}
+
+load {
+	format = "%5min"
+}
+
+cpu_temperature 0 {
+	format = "T: %degrees C"
+	path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input"
+}
+
+disk "/" {
+	format = "%free"
+}
+
+disk "/var" {
+	format = "%free"
+}
+
+disk "/boot" {
+	format = "%free"
+}
+
+disk "/home" {
+	format = "%free"
+}
