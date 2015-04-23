@@ -1,9 +1,6 @@
 [submodule "zsh/oh-my-zsh.symlink"]
 	path = zsh/oh-my-zsh.symlink
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "vim/vim.symlink/bundle/YouCompleteMe"]
-	path = vim/vim.symlink/bundle/YouCompleteMe
-	url = git@github.com:Valloric/YouCompleteMe.git
 [submodule "vim/vim.symlink/bundle/ctrlp.vim"]
 	path = vim/vim.symlink/bundle/ctrlp.vim
 	url = git@github.com:kien/ctrlp.vim.git
