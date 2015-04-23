@@ -61,8 +61,11 @@ Xft.hintstyle:  hintslight
 
 Xcursor.size: 10
 !URxvt*font:xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true
-URxvt*font:xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true
+!Rxvt*font:xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true
 !URxvt.font:xft:Ubuntu Mono:pixelsize=12,style=regular
+!URxvt*font: xft:Sauce\ Code\ Powerline\ Medium:pixelsize=13:antialias=true:hinting=true,xft:Sauce\ Code\ Powerline\ Medium:pixelsize=13:antialias=true:hinting=true
+!URxvt*font: xft:Terminess Powerline:pixelsize=13:antialias=true:hinting=true,xft:Terminess Powerline:pixelsize=13:antialias=true:hinting=true
+URxvt*font: xft:Sauce Code Powerline:pixelsize=13:antialias=true:hinting=true,xft:Sauce Code Powerline:pixelsize=13:antialias=true:hinting=true
 
 URxvt*.scrollBar: false
 URxvt*.depth: 32

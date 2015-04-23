@@ -1,3 +1,63 @@
 [submodule "zsh/oh-my-zsh.symlink"]
 	path = zsh/oh-my-zsh.symlink
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "vim/vim.symlink/bundle/YouCompleteMe"]
+	path = vim/vim.symlink/bundle/YouCompleteMe
+	url = git@github.com:Valloric/YouCompleteMe.git
+[submodule "vim/vim.symlink/bundle/ctrlp.vim"]
+	path = vim/vim.symlink/bundle/ctrlp.vim
+	url = git@github.com:kien/ctrlp.vim.git
+[submodule "vim/vim.symlink/bundle/idris-vim"]
+	path = vim/vim.symlink/bundle/idris-vim
+	url = git@github.com:idris-hackers/idris-vim.git
+[submodule "vim/vim.symlink/bundle/nerdtree"]
+	path = vim/vim.symlink/bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
+[submodule "vim/vim.symlink/bundle/numbers.vim"]
+	path = vim/vim.symlink/bundle/numbers.vim
+	url = git@github.com:myusuf3/numbers.vim.git
+[submodule "vim/vim.symlink/bundle/supertab"]
+	path = vim/vim.symlink/bundle/supertab
+	url = git@github.com:ervandew/supertab.git
+[submodule "vim/vim.symlink/bundle/syntastic"]
+	path = vim/vim.symlink/bundle/syntastic
+	url = git@github.com:scrooloose/syntastic.git
+[submodule "vim/vim.symlink/bundle/tabular"]
+	path = vim/vim.symlink/bundle/tabular
+	url = git@github.com:godlygeek/tabular.git
+[submodule "vim/vim.symlink/bundle/vim-airline"]
+	path = vim/vim.symlink/bundle/vim-airline
+	url = git@github.com:bling/vim-airline.git
+[submodule "vim/vim.symlink/bundle/vim-classpath"]
+	path = vim/vim.symlink/bundle/vim-classpath
+	url = git@github.com:tpope/vim-classpath.git
+[submodule "vim/vim.symlink/bundle/vim-clojure-static"]
+	path = vim/vim.symlink/bundle/vim-clojure-static
+	url = git@github.com:guns/vim-clojure-static.git
+[submodule "vim/vim.symlink/bundle/vim-colors-solarized"]
+	path = vim/vim.symlink/bundle/vim-colors-solarized
+	url = git@github.com:altercation/vim-colors-solarized.git
+[submodule "vim/vim.symlink/bundle/vim-easymotion"]
+	path = vim/vim.symlink/bundle/vim-easymotion
+	url = git@github.com:Lokaltog/vim-easymotion.git
+[submodule "vim/vim.symlink/bundle/vim-fireplace"]
+	path = vim/vim.symlink/bundle/vim-fireplace
+	url = git@github.com:tpope/vim-fireplace.git
+[submodule "vim/vim.symlink/bundle/vim-fugitive"]
+	path = vim/vim.symlink/bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "vim/vim.symlink/bundle/vim-redl"]
+	path = vim/vim.symlink/bundle/vim-redl
+	url = git@github.com:dgrnbrg/vim-redl.git
+[submodule "vim/vim.symlink/bundle/vim-surround"]
+	path = vim/vim.symlink/bundle/vim-surround
+	url = git@github.com:tpope/vim-surround.git
+[submodule "vim/vim.symlink/bundle/vim-vinegar"]
+	path = vim/vim.symlink/bundle/vim-vinegar
+	url = git@github.com:tpope/vim-vinegar.git
+[submodule "vim/vim.symlink/bundle/vim-vividchalk"]
+	path = vim/vim.symlink/bundle/vim-vividchalk
+	url = git@github.com:tpope/vim-vividchalk.git
+[submodule "vim/vim.symlink/bundle/vimerl"]
+	path = vim/vim.symlink/bundle/vimerl
+	url = git@github.com:jimenezrick/vimerl.git

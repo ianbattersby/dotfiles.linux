@@ -1,0 +1,102 @@
+let g:pathogen_disabled = ["idris-vim","vim-colors-solarized","vim-voogle","vimurl","nerdtree"]
+
+execute pathogen#infect()
+filetype plugin indent on
+syntax enable
+set runtimepath+=$GOROOT/misc/vim
+set background=dark
+" colorscheme solarized
+colorscheme vividchalk
+
+if &term =~ "xterm-256color"
+	set t_Co=256
+	" colorscheme solarized
+	colorscheme vividchalk
+endif
+
+set guifont=Sauce\ Code\ Powerline:h15
+set nowrap
+set laststatus=2
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set noshowmode
+set number
+set shortmess+=I
+
+" Clipboard
+set clipboard=unnamed
+
+" Cursor style
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" Airline
+let g:airline_theme = 'solarized'
+let g:airline_powerline_fonts = 1
+
+" Vim Numbers
+let g:enable_numbers = 1
+
+nnoremap <F3> :NumbersToggle<CR>
+nnoremap <F4> :NumbersOnOff<CR>
+
+" SuperTab
+let g:SuperTabDefaultCompletionType = "context"
+
+" CtrlP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+let g:ctrlp_by_filename = 0
+let g:ctrlp_open_new_file = 'v'
+let g:ctrlp__user_command = {
+	\ 'types': {
+		\ 1: ['.git', 'cd %s && git ls-files'],
+		\ 2: ['.hg', 'hg --cwd %s locate -I .'],
+		\ },
+	\ 'fallback': 'find %s -type f'
+	\ }
+
+nnoremap <leader>. :CtrlPTag<CR>
+
+" NERDtree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" gofmt
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+autocmd FileType go compiler go
+
+" go ctags generation
+au BufWritePost *.go silent! !ctags -R &
+
+" Omnisharp
+let g:OmniSharp_host = "http://localhost:2000"
+let g:OmniSharp_timeout = 1
+let g:Omnisharp_start_server = 0
+
+autocmd FileType cs nnoremap <F5> :wa!<cr>:OmniSharpBuildAsync<cr>
+autocmd FileType cs nnoremap gd :OmniSharpGotoDefinition<cr>
+nnoremap <leader>fi :OmniSharpFindImplementations<cr>
+nnoremap <leader>ft :OmniSharpFindType<cr>
+nnoremap <leader>fs :OmniSharpFindSymbol<cr>
+nnoremap <leader>fu :OmniSharpFindUsages<cr>
+nnoremap <leader>fm :OmniSharpFindMembersInBuffer<cr>
+nnoremap <leader>x  :OmniSharpFixIssue<cr>
+nnoremap <leader>fx :OmniSharpFixUsings<cr>
+nnoremap <leader>tt :OmniSharpTypeLookup<cr>
+nnoremap <leader>dc :OmniSharpDocumentation<cr>
+nnoremap <leader>rl :OmniSharpReloadSolution<cr>
+nnoremap <leader>cf :OmniSharpCodeFormat<cr>
+nnoremap <leader>tp :OmniSharpAddToProject<cr>
+autocmd BufWritePost *.cs call OmniSharp#AddToProject()
+
+let g:syntastic_cs_checkers = ['syntax', 'issues']
+autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
+
+autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+
+set updatetime=500
+set cmdheight=1
+
+" Markdown
+au BufRead,BufNewFile *.md set filetype=markdown
