@@ -1,19 +1,19 @@
-let g:pathogen_disabled = ["idris-vim","vim-colors-solarized","vim-voogle","vimurl","nerdtree"]
+"let g:pathogen_disabled = ["idris-vim","vim-colors-solarized","vim-voogle","vimurl","nerdtree"]
+let g:pathogen_disabled = ["idris-vim","vim-voogle","vimurl","nerdtree"]
 
 execute pathogen#infect()
 filetype plugin indent on
 syntax enable
 set runtimepath+=$GOROOT/misc/vim
+set t_Co=256
+
 set background=dark
-" colorscheme solarized
-colorscheme vividchalk
+"colorscheme vividchalk
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+colorscheme solarized
 
-if &term =~ "xterm-256color"
-	set t_Co=256
-	" colorscheme solarized
-	colorscheme vividchalk
-endif
-
+set anti enc=utf-8
 set guifont=Sauce\ Code\ Powerline:h15
 set nowrap
 set laststatus=2
