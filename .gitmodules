@@ -58,3 +58,6 @@
 [submodule "vim/vim.symlink/bundle/vimerl"]
 	path = vim/vim.symlink/bundle/vimerl
 	url = git@github.com:jimenezrick/vimerl.git
+[submodule "emacs/emacs.d.symlink"]
+	path = emacs/emacs.d.symlink
+	url = http://github.com/syl20bnr/spacemacs
