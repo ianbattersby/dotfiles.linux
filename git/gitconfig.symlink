@@ -5,3 +5,5 @@
 	pushInsteadOf = https://github.com/
 [url "git://github.com/"]
 	insteadOf = https://github.com/
+[core]
+	editor = /usr/bin/vi
