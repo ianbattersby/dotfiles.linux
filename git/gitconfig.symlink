@@ -12,3 +12,5 @@
 [alias]
 	ctags = !.git/hooks/ctags
 	ctags-init = !cp -R ~/.git_template/hooks ./.git
+[push]
+	default = simple
