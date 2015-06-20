@@ -5,10 +5,10 @@ general {
 }
 
 #order += "ipv6"
-order += "disk /"
-order += "disk /boot"
-order += "disk /var"
-order += "disk /home"
+#order += "disk /"
+#order += "disk /boot"
+#order += "disk /var"
+#order += "disk /home"
 #order += "run_watch DHCP"
 #order += "run_watch VPNC"
 #order += "path_exists VPN"
