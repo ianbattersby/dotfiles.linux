@@ -224,4 +224,7 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+# screen locking
+bindsym Control+mod1+l exec sh ~/.i3/i3lock.sh
+
 new_window pixel
