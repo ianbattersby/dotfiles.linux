@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!weechat.conf
+!python/url.py
+
+# ...even if they are in subdirectories
+!*/
