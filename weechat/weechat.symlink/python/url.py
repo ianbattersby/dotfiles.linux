@@ -27,7 +27,8 @@ url_dict = {}
 url_matcher = re.compile("(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?")
 
 def log_url(data, signal, signal_data):
-	message_dict = weechat.info_get_hashtable("irc_parse_message", {"message": signal_data})
+#        weechat.prnt("", "timer! signal_data=%s" % signal_data)
+	message_dict = weechat.info_get_hashtable("irc_message_parse", {"message": signal_data})
 	message = message_dict["arguments"].split(":", 1)[1]
 	network = signal.split(",", 1)[0]
 	for word in message.split(" "):
@@ -44,6 +45,7 @@ def log_url(data, signal, signal_data):
 def url_command(data, buffer, args):
 	plugin = weechat.buffer_get_string(buffer, "plugin")
 	if plugin == "irc":
+#                weechat.prnt("", "timer! data=%s" % data)
 		name = weechat.buffer_get_string(buffer, "name")
 		if len(url_dict.get(name, [])) > 0:
 			if re.match("^\d+$", args):
