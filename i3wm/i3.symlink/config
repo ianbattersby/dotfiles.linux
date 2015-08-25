@@ -197,7 +197,7 @@ client.background	#161616
 
 # gaps
 gaps inner 8
-gaps outer 6
+gaps outer 4
 smart_gaps on
 
 set $mode_gaps Gaps: (o) outer, (i) inner
